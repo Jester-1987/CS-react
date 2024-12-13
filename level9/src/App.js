@@ -9,28 +9,28 @@ function App() {
       <Routes>
         {/* Home Route */}
         <Route path="/" element={
-          <div style={{ color: 'black' }}>
+          <div className="home">
             <h1><b>This is the Home page</b></h1>
           </div>
         } />
 
         {/* Nintendo Route */}
         <Route path="/nintendo" element={
-          <div style={{ color: 'magenta' }}>
+          <div className="nintendo">
             <h1><b>This is the Nintendo page</b></h1>
           </div>
         } />
 
         {/* PlayStation Route */}
         <Route path="/playstation" element={
-          <div style={{ color: 'blue' }}>
+          <div className="playstation">
             <h1><b>This is the PlayStation page</b></h1>
           </div>
         } />
 
         {/* Xbox Route */}
         <Route path="/xbox" element={
-          <div style={{ color: 'lime'  }}>
+          <div className="xbox">
             <h1><b>This is the Xbox page</b></h1>
           </div>
         } />
@@ -41,4 +41,3 @@ function App() {
 }
 
 export default App;
-
