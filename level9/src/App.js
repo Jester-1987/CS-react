@@ -6,6 +6,9 @@ import SonyConsoles from './components/SonyConsoles';
 import MicrosoftConsoles from './components/MicrosoftConsoles';
 import SegaConsoles from './components/SegaConsoles';
 import L9Footer from './components/L9Footer';
+import CreatePost from './components/CreatePost';
+import Post from './components/Post';
+import PostList from './components/PostList';
 
 function App() {
   return (
@@ -13,23 +16,21 @@ function App() {
       <L9Banner />
       <Routes>
         {/* Home Route */}
-        <Route path="/" element={
-          <div className="home">
-            <h1><b>This is the Home page</b></h1>
-          </div>
-        } />
+        <Route path={"/post-list"} element={<PostList />} />
+        <Route path={"/"} element={<CreatePost />} />
+        <Route path={"/post/:id"} element={<Post />} />
 
         {/* Nintendo Route */}
-        <Route path="/nintendo" element={<NintendoConsoles />} />
+        <Route path={"/nintendo"} element={<NintendoConsoles />} />
 
         {/* PlayStation Route */}
-        <Route path="/playstation" element={<SonyConsoles />} />       
+        <Route path={"/playstation"} element={<SonyConsoles />} />       
 
         {/* PlayStation Route */}
-        <Route path="/xbox" element={<MicrosoftConsoles />} />
+        <Route path={"/xbox"} element={<MicrosoftConsoles />} />
 
          {/* Sega Route */}
-         <Route path="/sega" element={<SegaConsoles />} />
+         <Route path={"/sega"} element={<SegaConsoles />} />
         
       </Routes>
       {/* Footer component */}
