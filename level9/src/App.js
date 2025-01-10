@@ -1,6 +1,11 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import L9Banner from './L9Banner';
+import L9Banner from './components/L9Banner';
+import NintendoConsoles from './components/NintendoConsoles';
+import SonyConsoles from './components/SonyConsoles';
+import MicrosoftConsoles from './components/MicrosoftConsoles';
+import SegaConsoles from './components/SegaConsoles';
+import L9Footer from './components/L9Footer';
 
 function App() {
   return (
@@ -15,28 +20,22 @@ function App() {
         } />
 
         {/* Nintendo Route */}
-        <Route path="/nintendo" element={
-          <div className="nintendo">
-            <h1><b>This is the Nintendo page</b></h1>
-          </div>
-        } />
+        <Route path="/nintendo" element={<NintendoConsoles />} />
 
         {/* PlayStation Route */}
-        <Route path="/playstation" element={
-          <div className="playstation">
-            <h1><b>This is the PlayStation page</b></h1>
-          </div>
-        } />
+        <Route path="/playstation" element={<SonyConsoles />} />       
 
-        {/* Xbox Route */}
-        <Route path="/xbox" element={
-          <div className="xbox">
-            <h1><b>This is the Xbox page</b></h1>
-          </div>
-        } />
+        {/* PlayStation Route */}
+        <Route path="/xbox" element={<MicrosoftConsoles />} />
+
+         {/* Sega Route */}
+         <Route path="/sega" element={<SegaConsoles />} />
         
       </Routes>
+      {/* Footer component */}
+      <L9Footer />
     </Router>
+    
   );
 }
 
