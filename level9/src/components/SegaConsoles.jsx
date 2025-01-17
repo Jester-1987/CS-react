@@ -5,7 +5,7 @@ const SegaConsoles = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        // Fetch Nintendo consoles from the API
+        // Fetch consoles from the API
         fetch('http://localhost/level9reactapi/api/getsegaconsoles.php') 
             .then((response) => {
                 if (!response.ok) {

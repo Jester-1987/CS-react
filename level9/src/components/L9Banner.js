@@ -35,6 +35,9 @@ function L9Banner() {
                     <li class="nav-item text-center mx-2 mx-lg-1">
                         <Link class="nav-link" to="/xbox">Xbox</Link>
                     </li>
+                    <li class="nav-item text-center mx-2 mx-lg-1">
+                        <Link class="nav-link" to="/create-post">Enter the Forums</Link>
+                    </li>
                 </ul>         
 
             </div>   

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 
 function CreatePost() {
@@ -28,7 +28,7 @@ function CreatePost() {
         setIsLoading(true);
 
         try {
-            const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/create-post.php`, {
+            const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/create-post.php`, {
                 title,
                 content,
                 author,
@@ -86,6 +86,8 @@ function CreatePost() {
                     {isLoading ? 'Creating post...' : 'Create Post'}
                 </button>
             </form>
+            <p />
+        <Link to="/post-list">View latest posts!</Link>
         </div>
     );
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
@@ -8,24 +8,25 @@ const Post = () => {
 
     const fetchPost = async () => {
         try {
-            const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/post.php/${id}`);
+            const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/post.php/${id}`);
             const post = response.data.data;
             setPost(post);
         } catch (error) {
-            console.log(error);
+            console.error(error);
+            alert("An error occurred while fetching the post.");
         }
     };
 
-    React.useEffect(() => {
+    useEffect(() => {
         fetchPost();
-    }, []);
+    }, [id]); // Added 'id' as dependency
 
     if (!post) {
         return <div>Loading...</div>;
     }
 
     return (
-        <div className="containter my-4">
+        <div className="container my-4"> {/* Fixed typo */}
             <h1 className="mb-4">{post.title}</h1>
             <p>{post.content}</p>
             <hr />
