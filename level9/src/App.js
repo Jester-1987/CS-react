@@ -7,7 +7,7 @@ import SonyConsoles from './components/SonyConsoles';
 import MicrosoftConsoles from './components/MicrosoftConsoles';
 import SegaConsoles from './components/SegaConsoles';
 import CreatePost from './components/CreatePost';
-import Post from './components/Post';
+
 import PostList from './components/PostList';
 import L9Footer from './components/L9Footer';
 
@@ -22,7 +22,7 @@ function App() {
         {/* Create Posts Route*/}
         <Route path={"/post-list"} element={<PostList />} />
         <Route path={"/create-post"} element={<CreatePost />} />
-        <Route path={"/post/:id"} element={<Post />} />
+        
 
         {/* Nintendo Route */}
         <Route path={"/nintendo"} element={<NintendoConsoles />} />

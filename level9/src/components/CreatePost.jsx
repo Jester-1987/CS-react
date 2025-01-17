@@ -35,7 +35,8 @@ function CreatePost() {
             });
 
             console.log(response.data);
-            navigate('/');
+            // Redirect to /post-list after successful post creation
+            navigate('/post-list');
         } catch (error) {
             console.error(error);
             setError(error.response?.data?.message || 'Failed to create forum post. Please try again later.');
@@ -82,14 +83,15 @@ function CreatePost() {
                         required
                     />
                 </div>
-                <button type="submit" className="btn btn-primary" disabled={isLoading}>
+                <button type="submit" className="btn btn-info text-white" disabled={isLoading}>
                     {isLoading ? 'Creating post...' : 'Create Post'}
                 </button>
             </form>
             <p />
-        <Link to="/post-list">View latest posts!</Link>
+            <Link to="/post-list" className="btn btn-info text-white">View Latest Posts!</Link>
         </div>
     );
 }
 
 export default CreatePost;
+

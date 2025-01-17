@@ -22,7 +22,9 @@ function L9Banner() {
                         <Link class="nav-link active" aria-current="page" to="/"><div>
                     <i class="fas fa-home fa-lg mb-1"></i>
                     </div>Home</Link></li>
-                  
+                    <li class="nav-item text-center mx-2 mx-lg-1">
+                        <Link class="nav-link" to="/create-post">Enter the Forums</Link>
+                    </li>
                     <li class="nav-item text-center mx-2 mx-lg-1">
                         <Link class="nav-link" to="/nintendo">Nintendo</Link>
                     </li>
@@ -35,9 +37,7 @@ function L9Banner() {
                     <li class="nav-item text-center mx-2 mx-lg-1">
                         <Link class="nav-link" to="/xbox">Xbox</Link>
                     </li>
-                    <li class="nav-item text-center mx-2 mx-lg-1">
-                        <Link class="nav-link" to="/create-post">Enter the Forums</Link>
-                    </li>
+                 
                 </ul>         
 
             </div>   

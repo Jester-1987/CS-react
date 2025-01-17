@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 10, 2025 at 11:03 AM
+-- Generation Time: Jan 17, 2025 at 11:24 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.1.17
 
@@ -82,6 +82,17 @@ CREATE TABLE `forum_posts` (
   `publish_date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `forum_posts`
+--
+
+INSERT INTO `forum_posts` (`id`, `title`, `author`, `content`, `publish_date`) VALUES
+(3, 'The Hidden Gems of the SNES Library', 'RetroGamer92', 'While everyone remembers the big hits on the SNES, there were so many underrated games that flew under the radar. One of my favorites is Secret of Evermore. It doesn\'t get as much love as Secret of Mana, but the quirky story and fun combat system make it a blast to play. Another one is Demon\'s Crest—the dark, gothic atmosphere mixed with platforming made it stand out in the crowded SNES library.\r\n\r\nThere’s also Tetris Attack, which is a brilliant puzzle game that was overshadowed by Dr. Mario and other more popular puzzle games. If you like competitive, fast-paced gameplay, it’s perfect for any SNES collection. The last one I\'ll mention is EarthBound. Sure, it has a cult following, but when it first released, it was a bit of a hidden gem. The quirky humor and unique gameplay were ahead of its time.\r\n\r\nWhat hidden SNES gems do you all recommend? I\'d love to hear your thoughts!', '2025-01-17 14:58:21'),
+(4, 'Sega Genesis: My First Console', 'ClassicGamer_87', 'The Sega Genesis was the first console I ever owned, and it still holds a special place in my heart. I can still remember the hours I spent playing Sonic the Hedgehog, Streets of Rage 2, and Shining Force. The music and graphics for its time were incredible, and it really felt like a revolution compared to other systems.\n\nThe 16-bit era may not have had the flashy graphics of today&#39;s consoles, but the gameplay was top-notch. Sonic had its signature speed, Altered Beast had its raw energy, and Phantasy Star IV had a deep, engaging story. The Genesis definitely had its hits and misses, but it paved the way for so many of the great franchises we know today.\n\nDoes anyone else have nostalgic memories of the Genesis? Any lesser-known games you think people should check out?', '2025-01-17 15:12:55'),
+(5, 'PlayStation 1: The Game-Changer', 'PSX_Master', 'I don’t think we can talk about the early days of 3D gaming without mentioning the PlayStation 1. Sony completely changed the game with its leap into the world of polygons and CD-based storage. The PlayStation gave us games like Final Fantasy VII, Metal Gear Solid, and Crash Bandicoot, which were all major turning points in gaming history.\n\nOne thing I always loved about the PS1 was its versatility—there was literally something for everyone. You had platformers, RPGs, racing games, and even niche titles like Vagrant Story and Tomba! It was such an exciting time to be a gamer, and looking back, I don&#39;t think any console quite captured that sense of innovation and excitement.\n\nWhat do you think made the PS1 such a game-changer? And what were your favorite games from that era?', '2025-01-17 15:13:47'),
+(6, 'The Mighty NES: A Revolution in Gaming', 'GameBoyPro', 'The NES was my introduction to the world of video games, and honestly, I think it was the catalyst that turned gaming into what it is today. Sure, the graphics might look primitive by today’s standards, but when you compare Super Mario Bros., The Legend of Zelda, and Metroid to anything else at the time, they were groundbreaking.\n\nIt’s hard to imagine what the gaming landscape would look like if Nintendo hadn’t revived the industry with the NES after the crash of 1983. Every kid had a Duck Hunt or Mario cartridge, and those 8-bit tunes are still stuck in my head to this day. And who could forget the challenge of Contra? The 30 lives code will forever be etched in my memory!\n\nDo you think the NES truly shaped modern gaming, or was it just the beginning of a bigger trend?', '2025-01-17 15:20:34'),
+(7, 'The Sega Master System: The Underdog of the 80s', 'RetroJunkie85', 'When people talk about the Sega Master System, I feel like it’s always overlooked, but it was such a great console for its time. Yes, it had stiff competition from the NES, but Alex Kidd in Miracle World and Phantasy Star were fantastic games that made the Master System stand out. The graphics were a step ahead of the NES, and the sound quality was far better than most people give it credit for.\n\nOne of my personal favorites was Wonder Boy III: The Dragon’s Trap. The game’s mix of platforming and RPG elements made it so unique for its time. It’s a shame that it didn’t get the same recognition as Nintendo’s offerings. Sega was ahead of its time in terms of the console hardware, but poor marketing and the dominance of the NES led to its fall in North America.\n\nAnyone else have a soft spot for the Master System? What games from that console do you remember the most?', '2025-01-17 15:23:37');
+
 -- --------------------------------------------------------
 
 --
@@ -156,7 +167,7 @@ ALTER TABLE `consoles`
 -- AUTO_INCREMENT for table `forum_posts`
 --
 ALTER TABLE `forum_posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `games`
